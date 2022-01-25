@@ -5,22 +5,23 @@ body{
     padding-top: 20px;
     padding-bottom: 20px;
     margin: 5px auto;
-    background: lightyellow;
+    background:peachpuff;
+    transform: scale(1);
 }
 
-main>h1{
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 3rem;
-        font-family: Arial, Helvetica, sans-serif;
-        word-spacing: 20px;
-        letter-spacing: 30px;
-        background: black;
-        color: white;
-        padding: 15px;
-        margin-top: -25px;
-        text-shadow: 10px 5px 5px 0px red;
-        position: sticky;
+main>.main-head{
+    width: 95%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 5px;
+    letter-spacing: 5px;
+    background: black;
+    color: white;
+    padding: 2px;
+    margin: auto;
+    text-shadow: 10px 5px 5px 0px red;
 }
 
 /* Flex-Container CSS Code */
@@ -29,12 +30,12 @@ main>h1{
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    /* border: 1px solid black; */
 }
 
 /* Image Width CSS Code */
 .banner{
     width: 100%;
+    border-radius: 8px;
 }
 
 /* Flex-Container Inner Flex-Item CSS Code */
@@ -44,7 +45,7 @@ main>h1{
     background: white;
     border: 1px solid black;
     border-radius: 8px;
-    box-shadow: 0px 0px 9px 4px black;
+    box-shadow: 10px 5px 50px rgba(0,0,0,0.5);
 }
 
 /* In FLex-Item Have a Content-Div For Content Design CSS Code */
@@ -52,7 +53,6 @@ main>h1{
     display: flex;
     flex-direction: column;
     padding: 15px;
-    /* border: 2px solid black; */
 }
 
 .content h1{
@@ -73,11 +73,13 @@ main>h1{
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    transition: padding 0.3s;
 }
 
 .btn:hover{
     color: white;
     background: black;
+    padding: 20px;
 }
 
 /* Each Flex-Item Position CSS Code */
@@ -103,4 +105,76 @@ main>h1{
 
 #flex-item-5{
     align-self: flex-end;
+}
+
+/* Responsive CSS Code */
+@media screen and (max-width: 1120px) {
+    body{
+        transform: scale(0.9);
+        transition: 0.4s;
+        padding: 0px;
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    body{
+        background: crimson;
+    }
+}
+
+@media  all and (max-width: 1000px) {
+    body{
+        margin-top: -150px;
+        transition: 0.4s;
+    }
+
+    .flex-container-1, .flex-container-2{
+        flex-direction: column;
+    }
+    .flex-item{
+        width: auto;
+        transition: 0.4s;
+    }
+
+    .content{
+        text-align: center;
+        transition: 0.4s;
+    }
+
+    .btn{
+        background:coral;
+        color: white;
+    }
+
+    #flex-item-1{
+        align-self: center;
+    }
+    
+    #flex-item-2{
+        align-self: center;
+    }
+    
+    #flex-item-3{
+        align-self: center;
+    }
+    
+    #flex-item-4{
+        align-self: center;
+    }
+    
+    #flex-item-5{
+        align-self: center;
+    }
+    
+    #flex-item-5{
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    main>.main-head{
+        font-size: 1rem;
+        transition: 0.4s;
+    }
 }
