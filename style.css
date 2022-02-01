@@ -5,8 +5,10 @@ body{
     padding-top: 20px;
     padding-bottom: 20px;
     margin: 5px auto;
-    background:peachpuff;
+    background: black;
     transform: scale(1);
+    width: 100%;
+    max-width: 1440px;
 }
 
 main>.main-head{
@@ -45,7 +47,7 @@ main>.main-head{
     background: white;
     border: 1px solid black;
     border-radius: 8px;
-    box-shadow: 10px 5px 50px rgba(0,0,0,0.5);
+    box-shadow: 10px 5px 50px rgba(255,255,255,0.5);
 }
 
 /* In FLex-Item Have a Content-Div For Content Design CSS Code */
@@ -107,6 +109,22 @@ main>.main-head{
     align-self: flex-end;
 }
 
+footer{
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-weight: bold;
+    word-spacing: 2px;
+}
+
+footer a:hover{
+    color: orange;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /* Responsive CSS Code */
 @media screen and (max-width: 1120px) {
     body{
@@ -119,7 +137,10 @@ main>.main-head{
 
 @media screen and (max-width: 1090px) {
     body{
-        background: crimson;
+        background: black;
+    }
+    .flex-item{
+        box-shadow: 10px 5px 50px rgba(255,255,255,0.5);
     }
 }
 
@@ -176,5 +197,11 @@ main>.main-head{
     main>.main-head{
         font-size: 1rem;
         transition: 0.4s;
+    }
+}
+
+@media all and (max-width: 507px) {
+    footer{
+        line-height: 1.8;
     }
 }
